@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<xs:schema version="1.0"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://liktek.fr/likacoustik/config"
+           xmlns="http://liktek.fr/likacoustik/config"
+           xmlns:cl="http://liktek.fr/likacoustik/client"
+           xmlns:cm="http://liktek.fr/likacoustik/company"
+           elementFormDefault="qualified">
+
+    <xs:import schemaLocation="company.xsd" namespace="http://liktek.fr/likacoustik/company"/>
+    <xs:import schemaLocation="client.xsd" namespace="http://liktek.fr/likacoustik/client"/>
+    
+    <xs:element name="config" type="Config"/>
+    
+    <xs:complexType name="Config">
+        <xs:sequence>
+            <xs:element name="company" type="cm:Company" minOccurs="1" maxOccurs="1" />
+            <xs:element name="logo" type="xs:anyURI" minOccurs="0" maxOccurs="1" />
+            <xs:element name="clients" type="Clients" minOccurs="1" maxOccurs="1" />
+            <xs:element name="workspace" type="xs:anyURI" minOccurs="1" maxOccurs="1" />
+            <xs:element name="projects" type="Projects" minOccurs="1" maxOccurs="1" />
+            <xs:element name="standards" type="Standards" minOccurs="0" maxOccurs="1" />
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="Clients">
+        <xs:sequence>
+            <xs:element name="client" type="cl:Client" minOccurs="0" maxOccurs="unbounded" />
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="Projects">
+        <xs:sequence>
+            <xs:element name="project" type="Project" minOccurs="0" maxOccurs="unbounded" />
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="Project">
+        <xs:sequence>
+            <xs:element name="path" type="xs:anyURI" minOccurs="1" maxOccurs="1" />
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:int" use="required"/>
+    </xs:complexType>
+    
+    <xs:complexType name="Standards">
+        <xs:sequence>
+            <xs:element name="path" type="xs:anyURI" minOccurs="0" maxOccurs="unbounded" />
+        </xs:sequence>
+    </xs:complexType>
+    
+</xs:schema>

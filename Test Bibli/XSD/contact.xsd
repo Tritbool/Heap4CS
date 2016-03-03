@@ -1,0 +1,77 @@
+<?xml version="1.0" ?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<xs:schema version="1.0"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://liktek.fr/likacoustik/contact"
+           xmlns="http://liktek.fr/likacoustik/contact"
+           elementFormDefault="qualified">
+
+    
+    <xs:element name="contact" type="Contact"/>
+    
+    <xs:complexType name="Contact">
+        <xs:sequence>
+            <xs:element name="kind" type="Kind" minOccurs="1" maxOccurs="1" />
+            <xs:element name="fullname" type="Fullname" minOccurs="1" maxOccurs="1" />
+            <xs:element name="adress" type="Adress" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="tel" type="Tel" minOccurs="0" maxOccurs="1" />
+            <xs:element name="fax" type="Tel" minOccurs="0" maxOccurs="1" />
+            <xs:element name="mail" type="Mail" minOccurs="0" maxOccurs="1" />
+        </xs:sequence>
+    </xs:complexType>
+    
+    
+    
+    <xs:simpleType name="Kind">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Mr"/>
+            <xs:enumeration value="Mme" />
+            <xs:enumeration value="" />
+        </xs:restriction>
+    </xs:simpleType>
+    
+    
+    <xs:complexType name="Fullname">
+        <xs:sequence>
+            <!-- The first name is a company's name or a person's name -->
+            <xs:element name="firstname" type="xs:string" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="name" type="xs:string" minOccurs="0" maxOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="Adress">
+        <xs:sequence>
+            <xs:element name="street" type="xs:string" minOccurs="1" maxOccurs="1" />
+            <xs:element name="zipcode" type="Zipcode" minOccurs="1" maxOccurs="1" />
+            <xs:element name="city" type="xs:string" minOccurs="1" maxOccurs="1" />
+            <xs:element name="country" type="xs:string" minOccurs="1" maxOccurs="1" />
+        </xs:sequence>
+    </xs:complexType>
+    
+    
+    <!-- Allows to write any zipcode from 32344 to Lj344 H44 -->
+    <xs:simpleType name="Zipcode">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="(\w|\s)*"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="Tel">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="\+?(\d|\s)*"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="Mail">
+        <xs:restriction base="xs:anyURI">
+            <xs:pattern value="\w+(\w|\.|\-|_)*@(\w|\.|\-|_)*\.(\w|\.|\-|_)*\w+"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    
+</xs:schema>

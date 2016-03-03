@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+
+<ns1:project
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xmlns:ns1='http://liktek.fr/likacoustik/project'
+    xmlns:ns2='http://liktek.fr/likacoustik/company'
+    xmlns:ns3='http://liktek.fr/likacoustik/contact'
+    xmlns:ns4='http://liktek.fr/likacoustik/client'
+    xmlns:ns5='http://liktek.fr/likacoustik/grid'
+    xsi:schemaLocation='http://liktek.fr/likacoustik/project file:/Users/gauthierlyan/NetBeansProjects/LikacoustikXML/src/java/project.xsd'
+    id="1">
+    <ns1:company>
+        <ns2:surname>Liktek</ns2:surname>
+        <ns2:contact>
+            <ns3:kind></ns3:kind>
+            <ns3:fullname>
+                <ns3:firstname>Liktek corp</ns3:firstname>
+                <ns3:name></ns3:name>
+            </ns3:fullname>
+            <ns3:adress>
+                <ns3:street>ZA</ns3:street>
+                <ns3:zipcode>35 470</ns3:zipcode>
+                <ns3:city>Bain De Bretagne</ns3:city>
+                <ns3:country>FRANCE</ns3:country>
+            </ns3:adress>
+            <ns3:tel>02 99 98 97 96</ns3:tel>
+            <ns3:fax></ns3:fax>
+            <ns3:mail>liktek@ubat.fr</ns3:mail>
+        </ns2:contact>
+        <ns2:administrative>
+            <ns2:siret>000 000 000 00005</ns2:siret>
+            <ns2:apeCode>1234R</ns2:apeCode>
+        </ns2:administrative>
+    </ns1:company>
+    
+    <ns1:client>
+        <ns4:surname>TritCorp</ns4:surname>
+        <ns4:contact>
+            <ns3:kind></ns3:kind>
+            <ns3:fullname>
+                <ns3:firstname>Triton</ns3:firstname>
+                <ns3:name></ns3:name>
+            </ns3:fullname>
+            <ns3:adress>
+                <ns3:street>Rue des dieux</ns3:street>
+                <ns3:zipcode>1000</ns3:zipcode>
+                <ns3:city>Zion</ns3:city>
+                <ns3:country>FRANCE</ns3:country>
+            </ns3:adress>
+            <ns3:tel>02 34 12 12 12</ns3:tel>
+            <ns3:fax></ns3:fax>
+            <ns3:mail>triton@dieu.yolo</ns3:mail>
+        </ns4:contact>
+    </ns1:client>
+    
+    <ns1:grid>
+        <ns5:measure>
+            <ns5:ref>ct-2</ns5:ref>
+            <ns5:measureType>Isolement</ns5:measureType>
+            <ns5:measureNature>Horizontal</ns5:measureNature>
+            <ns5:origin>
+                <ns5:building>la tour de pise</ns5:building>
+                <ns5:floor>4</ns5:floor>
+                <ns5:flat></ns5:flat>
+                <ns5:room></ns5:room>
+            </ns5:origin>
+            <ns5:reception>
+                <ns5:building>L'eglise à côté</ns5:building>
+                <ns5:floor>0</ns5:floor>
+                <ns5:flat></ns5:flat>
+                <ns5:room></ns5:room>
+            </ns5:reception>
+            <ns5:equipment>Un marteau</ns5:equipment>
+            <ns5:indice>da ff</ns5:indice>
+            <ns5:value>
+                <ns5:required>40</ns5:required>
+                <ns5:measured>102</ns5:measured>
+            </ns5:value>
+            <ns5:constat>C</ns5:constat>
+            <ns5:comment>RAS</ns5:comment>
+        </ns5:measure>
+        
+        <ns5:measure>
+            <ns5:ref></ns5:ref>
+            <ns5:measureType>Bruit d'impact</ns5:measureType>
+            <ns5:measureNature>Vertical</ns5:measureNature>
+            <ns5:origin>
+                <ns5:building>Burj Dubaï</ns5:building>
+                <ns5:floor>85</ns5:floor>
+                <ns5:flat>Royal suite</ns5:flat>
+                <ns5:room>Main saloon</ns5:room>
+            </ns5:origin>
+            <ns5:reception>
+                <ns5:building>Burj Dubaï</ns5:building>
+                <ns5:floor>85</ns5:floor>
+                <ns5:flat>Royal Suite</ns5:flat>
+                <ns5:room>1st bedroom</ns5:room>
+            </ns5:reception>
+            <ns5:equipment>Impacteur caoutchouc</ns5:equipment>
+            <ns5:indice>ic 33</ns5:indice>
+            <ns5:value>
+                <ns5:required>43</ns5:required>
+                <ns5:measured>43</ns5:measured>
+            </ns5:value>
+            <ns5:constat>CT</ns5:constat>
+            <ns5:comment>A refaire</ns5:comment>
+        </ns5:measure>   
+    </ns1:grid>
+    
+    <ns1:plan>C:/user/qlqpart/plan.svg</ns1:plan>
+</ns1:project>

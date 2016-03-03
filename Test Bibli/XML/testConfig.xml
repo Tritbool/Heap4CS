@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+
+<ns1:config
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xmlns:ns1='http://liktek.fr/likacoustik/config'
+    xmlns:ns2='http://liktek.fr/likacoustik/company'
+    xmlns:ns3='http://liktek.fr/likacoustik/contact'
+    xmlns:ns4='http://liktek.fr/likacoustik/client'
+    xsi:schemaLocation='http://liktek.fr/likacoustik/config file:/Users/gauthierlyan/NetBeansProjects/LikacoustikXML/src/java/config.xsd'>
+    <ns1:company>
+        <ns2:surname>Liktek</ns2:surname>
+        <ns2:contact>
+            <ns3:kind></ns3:kind>
+            <ns3:fullname>
+                <ns3:firstname>Liktek Corp</ns3:firstname>
+                <ns3:name></ns3:name>
+            </ns3:fullname>
+            <ns3:adress>
+                <ns3:street>ZA</ns3:street>
+                <ns3:zipcode>35 470</ns3:zipcode>
+                <ns3:city>Bain De Bretagne</ns3:city>
+                <ns3:country>France</ns3:country>
+            </ns3:adress>
+            <ns3:tel>+33 2 01 02 03 04</ns3:tel>
+            <ns3:fax></ns3:fax>
+            <ns3:mail>liktek@ubat.fr</ns3:mail>
+        </ns2:contact>
+        <ns2:administrative>
+            <ns2:siret>123 456 789 00005</ns2:siret>
+            <ns2:apeCode>3456D</ns2:apeCode>
+        </ns2:administrative>
+    </ns1:company>
+    <ns1:logo>C:/logos/monlogo.png</ns1:logo>
+    <ns1:clients>
+        <ns1:client>
+            <ns4:surname>Client1</ns4:surname>
+            <ns4:contact>
+                <ns3:kind>Mr</ns3:kind>
+                <ns3:fullname>
+                    <ns3:firstname>Antoine</ns3:firstname>
+                    <ns3:name>Durond</ns3:name>
+                </ns3:fullname>
+                <ns3:adress>
+                    <ns3:street>Rue des MIAGE</ns3:street>
+                    <ns3:zipcode>75 000</ns3:zipcode>
+                    <ns3:city>Paris Sorbonne</ns3:city>
+                    <ns3:country>FRANCE</ns3:country>
+                </ns3:adress>
+                <ns3:tel>01 33 43 89 64</ns3:tel>
+                <ns3:fax>01 33 43 90 94</ns3:fax>
+                <ns3:mail>Antoine.Durond@gmail.com</ns3:mail>
+            </ns4:contact>
+        </ns1:client>
+        <ns1:client>
+            <ns4:surname>Service des eaux</ns4:surname>
+            <ns4:contact>
+                <ns3:kind></ns3:kind>
+                <ns3:fullname>
+                    <ns3:firstname>Service des eaux de Rennes</ns3:firstname>
+                    <ns3:name></ns3:name>
+                </ns3:fullname>
+                <ns3:adress>
+                    <ns3:street>2 place de Bretagne</ns3:street>
+                    <ns3:zipcode>35000</ns3:zipcode>
+                    <ns3:city>Rennes</ns3:city>
+                    <ns3:country>FRANCE</ns3:country>
+                </ns3:adress>
+                <ns3:tel>0299837564</ns3:tel>
+                <ns3:fax></ns3:fax>
+                <ns3:mail>service-des-eaux@rennes-ville.bzh</ns3:mail>
+            </ns4:contact>
+        </ns1:client>
+        <ns1:client>
+            <ns4:surname>Client 2</ns4:surname>
+            <ns4:contact>
+                <ns3:kind>Mme</ns3:kind>
+                <ns3:fullname>
+                    <ns3:firstname>Sophie</ns3:firstname>
+                    <ns3:name>Laroche</ns3:name>
+                </ns3:fullname>
+                <ns3:adress>
+                    <ns3:street>34 Boulevard des roys</ns3:street>
+                    <ns3:zipcode>69 700</ns3:zipcode>
+                    <ns3:city>Bourgoin-Jallieu</ns3:city>
+                    <ns3:country>FRANCE</ns3:country>
+                </ns3:adress>
+                <ns3:tel>04 76 08 94 65</ns3:tel>
+                <ns3:fax></ns3:fax>
+                <ns3:mail>sophiphie@hotmail.fr</ns3:mail>
+            </ns4:contact>
+        </ns1:client>
+    </ns1:clients>
+    <ns1:workspace>C:/user/liktek/</ns1:workspace>
+    <ns1:projects>
+        <ns1:project id="1">
+            <ns1:path>C:/user/liktek/Durond.lika</ns1:path>
+        </ns1:project>
+        <ns1:project id="2">
+            <ns1:path>C:/user/liktek/SDE-Rennes.lika</ns1:path>
+        </ns1:project>
+        <ns1:project id="3">
+            <ns1:path>C:/user/liktek/Laroche.lika</ns1:path>
+        </ns1:project>
+    </ns1:projects>
+    <ns1:standards>
+        <ns1:path>C:/user/liktek/Standards/Normes2014.xml</ns1:path>        
+        <ns1:path>C:/user/liktek/Standards/Normes2015.xml</ns1:path>
+        <ns1:path>C:/user/liktek/Standards/Normes2016.xml</ns1:path>
+    </ns1:standards>
+
+</ns1:config>
