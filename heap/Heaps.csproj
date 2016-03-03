@@ -43,7 +43,6 @@
     <Compile Include="Heap\Heap.cs" />
     <Compile Include="Heap\HeapInterface.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="XML\xml_xsdTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
